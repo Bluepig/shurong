@@ -1,0 +1,31 @@
+.sidebar {
+  width: calc(100% / 6);
+  position: fixed;
+
+  min-height: 100%;
+  border-right: 1px solid red;
+  background: #fcfcfc;
+  box-shadow: 4px 0 6px 0 rgba(0, 0, 0, 0.08);
+  padding-top: 2.3rem;
+
+  .sidebar-first-header {
+    font-size: 2rem;
+    font-family: PingFangSC-Regular;
+    color: #444444;
+    letter-spacing: 0;
+    line-height: 3.2rem;
+    text-align: center;
+  }
+
+  .sidebar-second-header {
+    width: 16rem;
+    margin: 6rem auto 0;
+    background: #444444;
+    border-radius: 1.85rem;
+    text-align: center;
+    font-family: PingFangSC-Medium;
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1.43px;
+  }
+}

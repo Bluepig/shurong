@@ -1,0 +1,19 @@
+// remove default margin
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+  background: red;
+}
+body {
+  background: yellow;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+#root {
+  height: 100%;
+}
