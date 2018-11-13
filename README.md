@@ -22,3 +22,10 @@
 
 - **Add Packages**
   - react-bulma-components & node-sass
+
+# 11-13 Note:
+
+- Finished styling the sidebar
+
+- TO DO:
+  Add topbar & visulization components
