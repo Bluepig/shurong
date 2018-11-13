@@ -1,19 +1,25 @@
 // remove default margin
-* {
-  margin: 0;
-  padding: 0;
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+// html {
+//   font-size: 62.5%;
+//   height: 100%;
+//   background: red;
+// }
+// body {
+//   background: yellow;
+//   height: 100%;
+//   font-family: Helvetica, Arial, sans-serif;
+//   font-size: 1.6rem;
+// }
+// #root {
+//   height: 100%;
+// }
+a {
+  text-decoration: none;
 }
-html {
-  font-size: 62.5%;
-  height: 100%;
-  background: red;
-}
-body {
-  background: yellow;
-  height: 100%;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-}
-#root {
-  height: 100%;
+ul {
+  list-style-type: none;
 }

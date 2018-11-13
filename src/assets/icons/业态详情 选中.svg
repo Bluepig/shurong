@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>业态详情</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Aurelia-Web-(Light)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="业态详情-" transform="translate(-36.000000, -304.000000)" stroke-width="2">
+            <g id="业态详情" transform="translate(36.000000, 304.000000)">
+                <path d="M3,16.0909727 L3,25.0000636" id="Stroke-1" stroke="#444444"></path>
+                <path d="M10.1176471,12.2727909 L10.1176471,25.0000636" id="Stroke-3" stroke="#444444"></path>
+                <path d="M17.2352941,14.8182455 L17.2352941,25.0000636" id="Stroke-5" stroke="#444444"></path>
+                <path d="M24.3529412,10.3637 L24.3529412,25.0000636" id="Stroke-7" stroke="#444444"></path>
+                <polyline id="Stroke-9" stroke="#3FA9F5" stroke-linejoin="round" points="3 11.6364273 10.1176471 6.54551818 17.2352941 10.3637 24.3529412 4.00006364"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

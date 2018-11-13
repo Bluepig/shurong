@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>项目监测 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Aurelia-Web-(Light)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="项目监测-" transform="translate(-36.000000, -193.000000)" stroke-width="2">
+            <g id="项目监测-选中" transform="translate(36.000000, 193.000000)">
+                <path d="M25.4664,17.86672 L25.4669333,21.06672 C25.4669333,22.8336533 24.0338667,24.26672 22.2669333,24.26672 L5.20026667,24.26672 C3.4328,24.26672 2.00026667,22.8336533 2.00026667,21.06672 L1.99973333,17.86672" id="Stroke-1" stroke="#444444"></path>
+                <path d="M1.99973333,10.4000533 L2.00026667,7.20005333 C2.00026667,5.43258667 3.43333333,4.00005333 5.20026667,4.00005333 L22.2669333,4.00005333 C24.0338667,4.00005333 25.4669333,5.43258667 25.4669333,7.20005333 L25.4669333,10.4000533" id="Stroke-3" stroke="#444444"></path>
+                <polyline id="Stroke-5" stroke="#3FA9F5" stroke-linejoin="round" points="3.06693333 14.1333867 4.66693333 14.1333867 7.3336 11.46672 11.6002667 18.4000533 17.4669333 8.26672 20.6669333 14.1333867 24.4002667 14.1333867"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
