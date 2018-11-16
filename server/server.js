@@ -1,53 +1,51 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
 
-const _ = require('lodash');
+// const {MongoClient} = require("mongodb");
 
-const MongoClient = require('mongodb').MongoClient;
+const api = require(path.resolve(__dirname, ".", "api/index"));
 
 // Pooling Connection
 // --------------------
-const dbURI = 'mongodb://localhost:27017',
-  dbName = 'myDB'; // NOTE: Change this;
+// DB Connection Setting
+// const dbURI = 'mongodb://localhost:27017', dbName = 'BI';
+// MongoClient.connect(dbURI, {useNewUrlParser: true}, (err, conn) => {});
 
-MongoClient.connect(dbURI, {useNewUrlParser: true}, (err, conn) => {
-  if (err) throw err;
+// Express App Object and Settings
+// -------------------------------
+let app = express();
+// request parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-  // Express App Object and Settings
-  // -------------------------------
-  let app = express();
-  // request parser
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({extended: true}));
+// static
+app.use(express.static(path.join(__dirname, "assets")));
 
-  // static
-  app.use(express.static(path.join(__dirname, 'build')));
+// Router
+// ------------------------------
+// API Root
+let apiRoot = express.Router();
+app.use("/api", apiRoot);
 
-  // homepage
-  app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-  });
+// data api root
+let dataApiRoot = express.Router();
+apiRoot.use("/data", dataApiRoot);
 
-  // Router
-  // ------------------------------
-  let apiRoot = express.Router();
-  app.use('/api', apiRoot);
+// Assets Management Api Root
+let assetsMgmtRoot = express.Router(); // /api/data/assets-mgmt?years&months&projids
+dataApiRoot.use("/assets-mgmt", assetsMgmtRoot);
 
-  // TEMP: api test
-  apiRoot.route('/data')
-    .get((req, res, next) => {
-      res.json({data: 'Hello Word!'});
-    })
+assetsMgmtRoot.route("/").get(api.getAssetsMgmtData);
 
+// Project Monitor Api Root
+let projectMonitorRoot = express.Router(); // /api/data/project-monitor?years&months&projids
+dataApiRoot.use("/project-monitor", projectMonitorRoot);
 
+projectMonitorRoot.route("/").get(api.getProjectMonitorData);
 
-
-  // Launch
-  // ------------------------------
-  // app.listen(process.env.PORT || 8080);
-  app.listen(5000);
-
-});
+// Launch
+// ------------------------------
+app.listen(5000);
