@@ -30,3 +30,13 @@ code {
 #root {
   height: 100%;
 }
+
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'header'
+    'nav'
+    'content'
+    'footer';
+}
