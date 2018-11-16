@@ -1,5 +1,4 @@
 [ignore]
-analysis_units/
 node_modules/
 api/
 test/
