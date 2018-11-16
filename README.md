@@ -32,9 +32,7 @@
 
 # 11-15 Note:
 
--   **Separate server-side modules into server/node_modules from root node_modules/**
-    -   Removed: `express mongodb body-parser lodash d3`
-    -   <span style="color:rgb(255, 139, 139);">_cd to server/ and `yarn install` or `npm install`_ to keep server-side dependencies up to date if necessary</span>
+-   **Server Build** *Transpile Server code before kick-start server* `yarn build-server`
 -   **API**
 
     1.   **项目资产管理页面**
