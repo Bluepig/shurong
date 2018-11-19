@@ -19,7 +19,7 @@ const api = require(path.resolve(__dirname, ".", "api/index"));
 let app = express();
 // request parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // static
 app.use(express.static(path.join(__dirname, "assets")));
@@ -45,6 +45,12 @@ let projectMonitorRoot = express.Router(); // /api/data/project-monitor?years&mo
 dataApiRoot.use("/project-monitor", projectMonitorRoot);
 
 projectMonitorRoot.route("/").get(api.getProjectMonitorData);
+
+// Business Monitor By Type Api Root
+let bizTypeMonitorRoot = express.Router(); // /api/data/biztype-monitor
+dataApiRoot.use("/biztype-monitor", bizTypeMonitorRoot);
+
+bizTypeMonitorRoot.route("/").get(api.getBizTypeDistData);
 
 // Launch
 // ------------------------------

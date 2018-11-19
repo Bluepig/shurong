@@ -1,7 +1,7 @@
-/* @flow */
+const { range } = require("lodash");
+const { rand } = require("./_mock-helpers");
 
-const {range} = require("lodash");
-const {rand} = require("./_mock-helpers");
+/* @flow */
 
 // 时间节点 * 项目ID * 指标项目
 
@@ -20,12 +20,12 @@ type ProjectMetrics = {
 type TimeSeriesMetrics = {
   year: number,
   month: number, // compound pk (year, month)
-  projects: Array<ProjectMetrics>
+  projects: Array < ProjectMetrics >
 };
 
 // Mocking Data Generator
-function randomProjectMetrics(projids: Array<number>): Array<ProjectMetrics> {
-  let d: Array<ProjectMetrics> = range(4).map(i => ({
+function randomProjectMetrics(projids: Array < number > ): Array < ProjectMetrics > {
+  let d: Array < ProjectMetrics > = range(4).map(i => ({
     projectID: i,
     avgLeasingRate: rand(),
     avgRent: rand(30),
@@ -40,10 +40,10 @@ function randomProjectMetrics(projids: Array<number>): Array<ProjectMetrics> {
 }
 
 function mockAssetsMgmt(
-  years: Array<number>,
-  months: Array<number>,
-  projids: Array<number>
-): Array<TimeSeriesMetrics> {
+  years: Array < number > ,
+  months: Array < number > ,
+  projids: Array < number >
+): Array < TimeSeriesMetrics > {
   return range(1, 37)
     .map(month => ({
       year: month < 12 ? 2016 : month < 24 ? 2017 : 2018,

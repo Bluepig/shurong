@@ -1,7 +1,7 @@
-/* @flow */
-
 const {mockProjectMonitor} = require('./mock-index.js');
 const {pick, mapValues} = require('lodash');
+
+/* @flow */
 
 /*  项目监测 */
 

@@ -1,7 +1,7 @@
-/* @flow */
-
 const {mockAssetsMgmt} = require('./mock-index.js');
 const {pick, mapValues} = require('lodash');
+
+/* @flow */
 
 /*  项目资产管理 */
 

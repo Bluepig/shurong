@@ -1,8 +1,8 @@
-/* @flow */
-
 const {range, mean, max, min} = require("lodash");
 const {quantile} = require("d3");
 const {rand} = require("./_mock-helpers");
+
+/* @flow */
 
 // 时间节点 * 项目ID * 指标
 type ProjectMetrics = {
