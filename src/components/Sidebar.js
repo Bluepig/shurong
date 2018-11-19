@@ -21,7 +21,6 @@ class Sidebar extends React.Component {
     return (
       <nav className='sidebar'>
         <h1 className='sidebar-first-header'>商业地产运营监控</h1>
-        <h2 className='sidebar-second-header'>长宁八八中心</h2>
 
         <ul className='page-type'>
           <li>

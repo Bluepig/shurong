@@ -2,8 +2,9 @@
 .sidebar {
   position: fixed;
   width: calc(100% / 6);
-  grid-area: nav;
   min-height: 100%;
+  top: 0;
+  left: 0;
   background: #fcfcfc;
   box-shadow: 4px 0 6px 0 rgba(0, 0, 0, 0.08);
   padding-top: 0.1px;
@@ -16,18 +17,6 @@
     letter-spacing: 0;
     line-height: 3.2rem;
     text-align: center;
-  }
-
-  .sidebar-second-header {
-    width: 16rem;
-    margin: 3rem auto 0;
-    background: #444444;
-    border-radius: 1.85rem;
-    text-align: center;
-    font-family: PingFangSC-Medium;
-    font-size: 2rem;
-    color: #ffffff;
-    letter-spacing: 1.43px;
   }
 
   .page-type {
@@ -54,8 +43,8 @@
   }
 
   .page-setting {
-    position: relative;
-    bottom: -8rem;
+    position: absolute;
+    bottom: 3rem;
     li {
       margin-left: 5rem;
       margin-bottom: 2.5rem;
