@@ -151,6 +151,9 @@
             service: number // 配套服务
           }
 
-      **业态详情页面**
+**业态详情页面**
 
-      Added header style
+Added header style
+
+- **Add Packages**
+- react-collapsible
