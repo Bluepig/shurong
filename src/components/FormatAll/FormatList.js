@@ -8,7 +8,7 @@ class FormatList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='format-list-wrapper'>
         <h1>FormatList</h1>
         <h1>FormatList</h1>
         <h1>FormatList</h1>
