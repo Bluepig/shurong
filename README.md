@@ -44,15 +44,10 @@
     -   `years` can be _omitted_ or single year `2016` or multiple hyphen-separated years like `2016-2017-2018`;
 
         > currently only support query for years 2016 - 2018;
-        > omitting years will return data of every year
-
+       
     -   `months` can be _omitted_ or single month `12` or multiple hyphen-separated months like `1-4-6`;
 
-        > omitting months will return data of every month
-
     -   `projids` can be _omitted_ or single id `1` or multiple hyphen-separated projids like `0-2`;
-
-        > omitting projids will return data of every project
 
     -   _Return_:
 
@@ -87,15 +82,10 @@
     -   `years` can be _omitted_ or single year `2016` or multiple hyphen-separated years like `2016-2017-2018`;
 
         > currently only support query for years 2016 - 2018;
-        > omitting years will return data of every year
 
     -   `months` can be _omitted_ or single month `12` or multiple hyphen-separated months like `1-4-6`;
 
-        > omitting months will return data of every month
-
     -   `projids` can be _omitted_ or single id `1` or multiple hyphen-separated projids like `0-2`;
-
-        > omitting projids will return data of every project
 
     -   _Return_:
 
