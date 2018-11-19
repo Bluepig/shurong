@@ -1,16 +1,8 @@
 # 11-8 Note:
 
--   Server DB initial setting
-
-    -   local db server running on `localhost:27017`
-    -   default db name: `myDB`
-
 -   production API server (production back-end, don't confuse with react-webpack server for development)
 
     -   listen to local 5000, start by `yarn start-server`
-
--   **Add Packages**
-    -   mongodb & d3
 
 # 11-12 Note:
 
@@ -32,7 +24,7 @@
 
 # 11-15 Note:
 
--   **Server Build** _Transpile Server code before kick-start server_ `yarn build-server`
+-   **Server Build** `yarn build-server` _Transpile Server code before kick-start server_ 
 -   **API**
 
     1.  **项目资产管理页面**
@@ -44,9 +36,7 @@
     -   `years` can be _omitted_ or single year `2016` or multiple hyphen-separated years like `2016-2017-2018`;
 
         > currently only support query for years 2016 - 2018;
-       
     -   `months` can be _omitted_ or single month `12` or multiple hyphen-separated months like `1-4-6`;
-
     -   `projids` can be _omitted_ or single id `1` or multiple hyphen-separated projids like `0-2`;
 
     -   _Return_:
