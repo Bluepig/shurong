@@ -1,8 +1,8 @@
 const {mockBizTypeDist} = require('./mock-index.js');
 
-/* @flow */
+/*  业态详情 */
 
-function getBizTypeDisttData(req: any, res: any, next: any) {
+function getBizTypeDisttData(req, res, next) {
   res.json(mockBizTypeDist());
 }
 
