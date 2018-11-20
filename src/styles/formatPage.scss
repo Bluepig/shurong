@@ -5,6 +5,7 @@
   border: 1px solid red;
   height: 100%;
   z-index: 0;
+  background: grey;
 }
 
 .format-list-wrapper {
@@ -15,19 +16,23 @@
 }
 .accordion__item {
   margin-bottom: 2.4rem;
-  border: 1px solid blue;
   background: #fcfcfc;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+.accordion__title:focus {
+  outline: none;
 }
 .accordion__title {
   background: #fcfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 5.6rem;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-  height: 5.6rem;
-  display: table;
-  span {
-    vertical-align: middle;
-    display: table-cell;
+  h3 {
     width: 100%;
     background: #fcfcfc;
     font-family: PingFangSC-Light;
