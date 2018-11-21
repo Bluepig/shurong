@@ -152,7 +152,8 @@ Added header style
 
     > _if year month week are all missing, return full time dataset of biz info or shop info, depending on existence of bizType or shopName_
 
-- one of `bizType` and `shopName` must present
+- one of `bizType` and `shopName` must present, if value being `full`, return full dataset
+
 - `year` can be _omitted_ or single year `2016`;
 
   > currently only support query for years 2016 - 2018;
