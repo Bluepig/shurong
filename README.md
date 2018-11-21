@@ -29,9 +29,9 @@
 
     1.  **项目资产管理页面**
 
-        `localhost:5000/api/data/assets-mgmt[?{years}&{months}&{projids}]`
+        `/api/data/assets-mgmt[?{years}&{months}&{projids}]`
 
-        > e.g GET localhost:5000/api/data/assets-mgmt?years=2016&months=1-3-6&projids=0-1
+        > e.g GET /api/data/assets-mgmt?years=2016&months=1-3-6&projids=0-1
 
     -   `years` can be _omitted_ or single year `2016` or multiple hyphen-separated years like `2016-2017-2018`;
 
@@ -66,9 +66,9 @@
 
     2.  **项目监测页面**
 
-        `localhost:5000/api/data/project-monitor[?{years}&{months}&{projids}]`
+        `/api/data/project-monitor[?{years}&{months}&{projids}]`
 
-        > e.g GET localhost:5000/api/data/project-monitor?years=2016&months=1-3-6&projids=0-1
+        > e.g GET /api/data/project-monitor?years=2016&months=1-3-6&projids=0-1
 
     -   `years` can be _omitted_ or single year `2016` or multiple hyphen-separated years like `2016-2017-2018`;
 
@@ -82,6 +82,13 @@
 
         ```javascript
         type Returned = Array<TimeSeriesMetrics>;
+
+        type TimeSeriesMetrics = {
+          year: number,
+          month: number, // compound pk (year, month)
+          projects: Array<ProjectMetrics>,
+          mbrStats: Array<MbrMetrics>
+        };
 
         type ProjectMetrics = {
           projectID: number, // project id
@@ -97,13 +104,6 @@
           gfa: number, // Gross Floor Area 总建筑面积
           nla: number, // Net Leasable Area 总可租面积
           pkCapacity: number // Parking Capacity 总车位数
-        };
-
-        type TimeSeriesMetrics = {
-          year: number,
-          month: number, // compound pk (year, month)
-          projects: Array<ProjectMetrics>,
-          mbrStats: Array<MbrMetrics>
         };
 
         type MbrMetrics = {
@@ -135,3 +135,76 @@ Added header style
 
 -   **Add Packages**
     -   react-collapsible
+
+# 11-19 Note:
+
+-   **API**
+
+1.  **业态详情页面**
+
+    `/api/data/tenant-operation-monitor[ ? {bizType} & {shopName} & {year} & {month} & {week} ]`
+
+    > e.g GET /api/data/tenant-operation-monitor?bizType=%E9%A4%90%E9%A5%AE&year=2016&month=10
+    > _one of bizType or shopName must present in query, if both, return shop data_
+    > _Chinese characters are url encoded for value of  bizType and shopName parameter, simply use \`encodeURI(/_ string _/)\`_
+    > _if year month week are all missing, return full time dataset of biz info or shop info, depending on existence of bizType or shopName_
+
+-   one of `bizType` and `shopName` must present
+-   `year` can be _omitted_ or single year `2016`;
+
+    > currently only support query for years 2016 - 2018;
+
+-   `month` can be _omitted_ or single month `12`;
+
+-   `week` can be _omitted_ or single value in range _[1, 2, 3, 4]_ for there are 4 weeks within one month;
+
+-   _Return_:
+
+    ```javascript
+    // if shopName presents
+    type Returned = Array<TenantOperationRecord>;
+    // if bizType presents
+    type Returned = Array<BizTypeOperationRecord>;
+
+    type BizTypeOperationRecord = {
+      year: number, // 年份
+      month: number, // 月份
+      week: number, // 周数
+      bizType: string, // 业态名称
+      area: number, // 业态面积
+      areaPct: number, // 业态面积 全场占比
+      sales: number, // 业态营业额
+      salesPct: number, // 业态营业额 全场占比
+      salesLP: number, // 业态营业额 环比 last period
+      salesSPLY: number, // 业态营业额 同比 same period last year
+      spa: number, // 业态坪效 sales per area
+      spaLP: number, // 业态坪效 环比
+      spaSPLY: number, // 业态坪效 同比
+      ros: number, // 业态租售比 rent over sales
+      rosLP: number, // 业态租售比 环比
+      rosSPLY: number, // 业态租售比 同比
+      rosRange: [number, number] // 业态
+    }
+
+    type TenantOperationRecord = {
+      year: number, // 年份
+      month: number, // 月份
+      week: number, // 周数
+      name: string, // 商店名称
+      bizType: string, // 业态种类
+      area: number, // 商店面积
+      areaPct: number, // 面积 业态 占比
+      name: string, // 商店名称
+      sales: number, // 营业额
+      salesPct: number, // 营业额 业态占比
+      salesLP: number, // 营业额 环比 last period
+      salesSPLY: number, // 营业额 同比 same period last year
+      spa: number, // 坪效 sales per area
+      spaLP: number, // 坪效 环比
+      spaSPLY: number, // 坪效 同比
+      rent: number, // 租金
+      ros: number, // 租售比 rent over sales
+      rosLP: number, // 租售比 环比
+      rosSPLY: number, // 租售比 同比
+    };
+    ```
