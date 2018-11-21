@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const path = require("path");
-const fs = require("fs");
+// const fs = require("fs");
 
 // const {MongoClient} = require("mongodb");
 
@@ -47,10 +47,10 @@ dataApiRoot.use("/project-monitor", projectMonitorRoot);
 projectMonitorRoot.route("/").get(api.getProjectMonitorData);
 
 // Business Monitor By Type Api Root
-let bizTypeMonitorRoot = express.Router(); // /api/data/biztype-monitor
-dataApiRoot.use("/biztype-monitor", bizTypeMonitorRoot);
+let tenantOperationMonitorRoot = express.Router(); // /api/data/tenant-operation-monitor?[shopName,bizType]&year&month&week
+dataApiRoot.use("/tenant-operation-monitor", tenantOperationMonitorRoot);
 
-bizTypeMonitorRoot.route("/").get(api.getBizTypeDistData);
+tenantOperationMonitorRoot.route("/").get(api.getTenantOperationData);
 
 // Launch
 // ------------------------------

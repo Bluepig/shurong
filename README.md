@@ -129,30 +129,7 @@
 
 -   **API**
 
-1.  业态分布
-    `localhost:5000/api/data/biztype-monitor`
-
-    -   _Return_:
-
-        ```javascript
-        type Returned = Array < NamedDist >
-
-        type NamedDist = {
-          name: string, // 分布名称
-          dist: BizTypeDist // 对应各类业态百分比
-        }
-
-        type BizTypeDist = {
-          food: number, // 餐饮
-          leisure: number, // 娱乐
-          grocery: number, // 超市
-          retail: number, // 零售
-          office: number, // 写字楼
-          service: number // 配套服务
-        }
-        ```
-
-2.  业态详情页面
+1.  业态详情页面
 
 Added header style
 
