@@ -145,8 +145,11 @@ Added header style
     `/api/data/tenant-operation-monitor[ ? {bizType} & {shopName} & {year} & {month} & {week} ]`
 
     > e.g GET /api/data/tenant-operation-monitor?bizType=%E9%A4%90%E9%A5%AE&year=2016&month=10
+
     > _one of bizType or shopName must present in query, if both, return shop data_
+
     > _Chinese characters are url encoded for value of  bizType and shopName parameter, simply use \`encodeURI(/_ string _/)\`_
+    
     > _if year month week are all missing, return full time dataset of biz info or shop info, depending on existence of bizType or shopName_
 
 -   one of `bizType` and `shopName` must present
