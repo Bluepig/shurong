@@ -1,13 +1,18 @@
-const {mockTenantOperation} = require("./mock-index.js");
+const { mockTenantOperation } = require('./mock-index.js');
 
 /*  业态详情 */
 
 function getTenantOperationData(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
   // Fake Data
-  const {TenantOperationData, BizTypeOperationData} = mockTenantOperation();
+  const { TenantOperationData, BizTypeOperationData } = mockTenantOperation();
   // shopName or bizType
   // optional year month week
-  let {shopName, bizType, year, month, week} = req.query;
+  let { shopName, bizType, year, month, week } = req.query;
   year = +year;
   month = +month;
   week = +week;
@@ -24,13 +29,18 @@ function getTenantOperationData(req, res, next) {
   if (week) bizData = bizData.filter(o => o.week === week);
 
   if (!(shopName || bizType)) {
-    res.status(400).json("Specify shop name or biz type");
-    return
-  } else
+    res.status(400).json('Specify shop name or biz type');
+    return;
+  }
 
   // shop data
-  data = data.filter(o => (shopName && shopName !== 'full' ? o.name === shopName : true));
-  bizData = bizData.filter(o => (bizType && bizType !== 'full' ? o.bizType === bizType : true));
+  else
+    data = data.filter(o =>
+      shopName && shopName !== 'full' ? o.name === shopName : true
+    );
+  bizData = bizData.filter(o =>
+    bizType && bizType !== 'full' ? o.bizType === bizType : true
+  );
 
   if (shopName) {
     res.status(200).json(data);

@@ -1,44 +1,97 @@
 .formatPage {
   max-width: 100%;
+  height: 100%;
   margin-top: 8rem;
   margin-left: calc(100% / 6);
-  border: 1px solid red;
-  height: 100%;
   z-index: 0;
-  background: #f6f7fc;
-}
-
-.format-list-wrapper {
-  width: 31%;
-  height: 100%;
-  border: 1px solid red;
-  margin: 2.4rem;
-}
-.accordion__item {
-  margin-bottom: 2.4rem;
-  background: #fcfcfc;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-}
-.accordion__title:focus {
-  outline: none;
-}
-.accordion__title {
-  background: #fcfcfc;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 5.6rem;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  h3 {
-    width: 100%;
-    background: #fcfcfc;
-    font-family: PingFangSC-Light;
-    font-size: 1.4rem;
-    color: #444444;
-    letter-spacing: 0.32px;
-    font-weight: normal;
+
+  .format-list-wrapper {
+    width: 31%;
+    height: 100%;
+    border: 1px solid red;
+    margin: 2.4rem;
+
+    .accordion__item {
+      margin-bottom: 2.4rem;
+      background: #fcfcfc;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+
+      div[aria-selected='true'] h3 {
+        color: white;
+      }
+      #accordion__title-0[aria-selected='true'] h3 {
+        background: #f16548;
+      }
+      #accordion__title-1[aria-selected='true'] h3,
+      #accordion__title-1 img {
+        background: #f16548;
+      }
+      #accordion__title-2[aria-selected='true'] h3,
+      #accordion__title-2 img {
+        background: #f1963a;
+      }
+      #accordion__title-3[aria-selected='true'] h3,
+      #accordion__title-3 img {
+        background: #ea557f;
+      }
+      #accordion__title-4[aria-selected='true'] h3,
+      #accordion__title-4 img {
+        background: #5073b8;
+      }
+      #accordion__title-5[aria-selected='true'] h3,
+      #accordion__title-5 img {
+        background: #5ec778;
+      }
+
+      .accordion__title {
+        background: #fcfcfc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5.6rem;
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        h3 {
+          width: 93.4%;
+          background: #fcfcfc;
+          font-family: PingFangSC-Light;
+          font-size: 1.4rem;
+          color: #444444;
+          letter-spacing: 0.32px;
+          font-weight: normal;
+          border-radius: 6px;
+
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 6px;
+            margin-right: 1.8rem;
+          }
+        }
+      }
+
+      .accordion__title:focus {
+        outline: none;
+      }
+
+      .accordion__body {
+        border: 1px solid red;
+        background: #fcfcfc;
+        box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .formatDisplayWrapper {
+    width: 63%;
+    height: 100%;
+    margin: 2.4rem;
+    border: 1px solid red;
   }
 }

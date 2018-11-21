@@ -6,7 +6,11 @@ const HeaderBar = () => (
   <header className='headerbar'>
     <div className='header-container'>
       <span className='headerbar-header'>长宁八八中心</span>
-      <img src={projectDetailsLogo} className='avatar-profile-icon' />
+      <img
+        src={projectDetailsLogo}
+        alt='project details icon'
+        className='avatar-profile-icon'
+      />
     </div>
   </header>
 );

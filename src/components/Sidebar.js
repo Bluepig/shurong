@@ -24,51 +24,51 @@ class Sidebar extends React.Component {
 
         <ul className='page-type'>
           <li>
-            <img src={multiProjectsLogo} />
-            <a href='#'>多项目资产管理</a>
+            <img src={multiProjectsLogo} alt='multi-projects-icon' />
+            <a href='/'>多项目资产管理</a>
           </li>
           <li>
-            <img src={singleProjectLogo} />
-            <a href='#'>单项目资产管理</a>
+            <img src={singleProjectLogo} alt='single-projects-icon' />
+            <a href='/'>单项目资产管理</a>
           </li>
           <li>
-            <img src={projectMonitoringLogo} />
-            <a href='#'>项目监测</a>
+            <img src={projectMonitoringLogo} alt='project-monitoring-icon' />
+            <a href='/'>项目监测</a>
           </li>
           <li>
-            <img src={projectDetailsLogo} />
-            <a href='#'>项目详情</a>
+            <img src={projectDetailsLogo} alt='project-details-icon' />
+            <a href='/'>项目详情</a>
           </li>
           <li>
-            <img src={formatDetailsIcon} />
-            <a href='#'>业态详情</a>
+            <img src={formatDetailsIcon} alt='format-details-icon' />
+            <a href='/'>业态详情</a>
           </li>
           <li>
-            <img src={shopDetailsIcon} />
-            <a href='#'>店铺详情</a>
+            <img src={shopDetailsIcon} alt='shop-details-icon' />
+            <a href='/'>店铺详情</a>
           </li>
           <li>
-            <img src={abnormalListIcon} />
-            <a href='#'>异常列表</a>
+            <img src={abnormalListIcon} alt='abnormal-list-icon' />
+            <a href='/'>异常列表</a>
           </li>
           <li>
-            <img src={parkingLotIcon} />
-            <a href='#'>停车场管理</a>
+            <img src={parkingLotIcon} alt='parking-lot-icon' />
+            <a href='/'>停车场管理</a>
           </li>
         </ul>
 
         <ul className='page-setting'>
           <li>
-            <img src={systemSettingIcon} />
-            <a href='#'>系统设置</a>
+            <img src={systemSettingIcon} alt='system-setting-icon' />
+            <a href='/'>系统设置</a>
           </li>
           <li>
-            <img src={dataImportIcon} />
-            <a href='#'>数据录入</a>
+            <img src={dataImportIcon} alt='data-import-icon' />
+            <a href='/'>数据录入</a>
           </li>
           <li>
-            <img src={loggingOutIcon} />
-            <a href='#'>登出当前帐号</a>
+            <img src={loggingOutIcon} alt='logging-out-icon' />
+            <a href='/'>登出当前帐号</a>
           </li>
         </ul>
       </nav>

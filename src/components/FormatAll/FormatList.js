@@ -5,15 +5,12 @@ import {
   AccordionItemTitle,
   AccordionItemBody
 } from 'react-accessible-accordion';
+import foodIcon from '../../assets/icons/food-icon.svg';
+import entertainmentIcon from '../../assets/icons/entertainment-icon.svg';
+import serviceIcon from '../../assets/icons/service-icon.svg';
+import marketIcon from '../../assets/icons/market-icon.svg';
+import clothesIcon from '../../assets/icons/clothes-icon.svg';
 
-import foodIcon from '../../assets/icons/food-icon.png';
-import entertainmentIcon from '../../assets/icons/entertainment-icon.png';
-import serviceIcon from '../../assets/icons/service-icon.png';
-import marketIcon from '../../assets/icons/market-icon.png';
-import clothesIcon from '../../assets/icons/clothes-icon.png';
-
-import loggingOutIcon from '../../assets/icons/logging-out-icon.svg';
-// Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/minimal-example.css';
 class FormatList extends React.Component {
   constructor(props) {
@@ -34,7 +31,7 @@ class FormatList extends React.Component {
           <AccordionItem>
             <AccordionItemTitle>
               <h3>
-                <img src={foodIcon} alt='' />
+                <img src={foodIcon} alt='food-icon' />
                 餐饮
               </h3>
             </AccordionItemTitle>
@@ -57,7 +54,10 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>休闲娱乐</h3>
+              <h3>
+                <img src={entertainmentIcon} alt='entertainment-icon' />
+                休闲娱乐
+              </h3>
             </AccordionItemTitle>
             <AccordionItemBody>
               <ul>
@@ -68,7 +68,10 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>超市</h3>
+              <h3>
+                <img src={marketIcon} alt='market-icon' />
+                超市
+              </h3>
             </AccordionItemTitle>
             <AccordionItemBody>
               <ul>
@@ -79,7 +82,10 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>配套服务</h3>
+              <h3>
+                <img src={serviceIcon} alt='service-icon' />
+                配套服务
+              </h3>
             </AccordionItemTitle>
             <AccordionItemBody>
               <ul>
@@ -100,7 +106,10 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>零售</h3>
+              <h3>
+                <img src={clothesIcon} alt='clothes-icon' />
+                零售
+              </h3>
             </AccordionItemTitle>
             <AccordionItemBody>
               <ul>
