@@ -12,6 +12,7 @@ import serviceIcon from '../../assets/icons/service-icon.png';
 import marketIcon from '../../assets/icons/market-icon.png';
 import clothesIcon from '../../assets/icons/clothes-icon.png';
 
+import loggingOutIcon from '../../assets/icons/logging-out-icon.svg';
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/minimal-example.css';
 class FormatList extends React.Component {
@@ -26,7 +27,16 @@ class FormatList extends React.Component {
         <Accordion>
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>餐饮</h3>
+              <h3>各业态对比</h3>
+            </AccordionItemTitle>
+          </AccordionItem>
+
+          <AccordionItem>
+            <AccordionItemTitle>
+              <h3>
+                <img src={foodIcon} alt='' />
+                餐饮
+              </h3>
             </AccordionItemTitle>
             <AccordionItemBody>
               <ul>
