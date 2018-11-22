@@ -215,3 +215,10 @@ Added header style
 
 - **Add Packages**
   - axios for handling requests
+
+# 11-22 Note:
+
+- **React**
+
+1.  Finished format list styling
+2.  **TODO** : design react component / add life cycle methods for loading data
