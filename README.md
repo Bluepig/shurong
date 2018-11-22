@@ -221,4 +221,9 @@ Added header style
 - **React**
 
 1.  Finished format list styling
-2.  **TODO** : design react component / add life cycle methods for loading data
+2.  Added react router in AppRouter.js
+3.  Removed App.js
+4.  **TODO** : design react component / add life cycle methods for loading data
+
+- **Add Packages**
+  - react-router-dom

@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../styles/sidebar.scss';
 import multiProjectsLogo from '../assets/icons/multi-projects-icon.svg';
 import singleProjectLogo from '../assets/icons/single-project-icon.svg';
@@ -41,7 +42,9 @@ class Sidebar extends React.Component {
           </li>
           <li>
             <img src={formatDetailsIcon} alt='format-details-icon' />
-            <a href='/'>业态详情</a>
+            <NavLink to='/format' activeClassName='is-active'>
+              业态详情
+            </NavLink>
           </li>
           <li>
             <img src={shopDetailsIcon} alt='shop-details-icon' />
