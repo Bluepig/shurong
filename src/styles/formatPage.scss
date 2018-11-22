@@ -9,7 +9,6 @@
   .format-list-wrapper {
     width: 31%;
     height: 100%;
-    border: 1px solid red;
     margin: 2.4rem;
 
     .accordion__item {
@@ -46,6 +45,7 @@
       }
 
       .accordion__title {
+        cursor: pointer;
         background: #fcfcfc;
         display: flex;
         align-items: center;
@@ -75,15 +75,35 @@
         }
       }
 
+      .accordion__title[aria-selected='true'] {
+        border-radius: 12px 12px 0 0;
+      }
+      .accordion__title[aria-selected='true'] + div {
+        border-radius: 0 0 12px 12px;
+      }
+
       .accordion__title:focus {
         outline: none;
       }
 
       .accordion__body {
-        border: 1px solid red;
         background: #fcfcfc;
         box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.08);
         border-radius: 12px;
+
+        ul {
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+          padding-left: 4.8rem;
+          list-style-type: disc;
+          li {
+            margin-bottom: 1.6rem;
+            font-family: PingFangSC-Light;
+            font-size: 14px;
+            color: #444444;
+            letter-spacing: 0.32px;
+          }
+        }
       }
     }
   }
