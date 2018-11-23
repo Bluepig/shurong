@@ -10,6 +10,7 @@ import entertainmentIcon from '../../assets/icons/entertainment-icon.svg';
 import serviceIcon from '../../assets/icons/service-icon.svg';
 import marketIcon from '../../assets/icons/market-icon.svg';
 import clothesIcon from '../../assets/icons/clothes-icon.svg';
+import allFormatsIcon from '../../assets/icons/all-formats-icon.svg';
 
 import 'react-accessible-accordion/dist/minimal-example.css';
 class FormatList extends React.Component {
@@ -18,19 +19,26 @@ class FormatList extends React.Component {
     this.state = {};
   }
 
+  onTitleClick = e => {
+    this.props.onFatherClick(e.target.getAttribute('data-type'));
+  };
+
   render() {
     return (
       <div className='format-list-wrapper'>
         <Accordion>
-          <AccordionItem>
+          <AccordionItem expanded={true}>
             <AccordionItemTitle>
-              <h3>各业态对比</h3>
+              <h3 data-type='full' onClick={this.onTitleClick}>
+                <img src={allFormatsIcon} alt='allFormatsIcon' />
+                各业态对比
+              </h3>
             </AccordionItemTitle>
           </AccordionItem>
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>
+              <h3 onClick={this.onTitleClick} data-type='food'>
                 <img src={foodIcon} alt='food-icon' />
                 餐饮
               </h3>
@@ -54,7 +62,7 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>
+              <h3 onClick={this.onTitleClick} data-type='entertainment'>
                 <img src={entertainmentIcon} alt='entertainment-icon' />
                 休闲娱乐
               </h3>
@@ -68,7 +76,7 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>
+              <h3 onClick={this.onTitleClick} data-type='market'>
                 <img src={marketIcon} alt='market-icon' />
                 超市
               </h3>
@@ -82,7 +90,7 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>
+              <h3 onClick={this.onTitleClick} data-type='service'>
                 <img src={serviceIcon} alt='service-icon' />
                 配套服务
               </h3>
@@ -106,7 +114,7 @@ class FormatList extends React.Component {
 
           <AccordionItem>
             <AccordionItemTitle>
-              <h3>
+              <h3 onClick={this.onTitleClick} data-type='clothes'>
                 <img src={clothesIcon} alt='clothes-icon' />
                 零售
               </h3>

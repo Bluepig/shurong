@@ -3,11 +3,20 @@ import FormatList from './FormatList';
 import FormatDisplay from './FormatDisplay';
 import '../../styles/formatPage.scss';
 class FormatPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      biztype: 'full'
+    };
+  }
+  onFormatClick = data => {
+    this.setState({ biztype: data });
+  };
   render() {
     return (
       <div className='formatPage'>
-        <FormatList />
-        <FormatDisplay />
+        <FormatList onFatherClick={this.onFormatClick} />
+        <FormatDisplay testdata={this.state.biztype} />
       </div>
     );
   }

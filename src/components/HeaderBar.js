@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/headerbar.scss';
-
 import projectDetailsLogo from '../assets/icons/project-details-logo.svg';
 const HeaderBar = () => (
   <header className='headerbar'>
