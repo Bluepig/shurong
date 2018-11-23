@@ -1,20 +1,20 @@
 /* @flow */
 // $FlowFixMe
-const {range, round, flatten, uniq} = require("lodash");
-const fs = require("fs");
-const path = require("path");
-const {rand} = require("./_mock-helpers");
+const { range, round, flatten, uniq } = require('lodash');
+const fs = require('fs');
+const path = require('path');
+const { rand } = require('./_mock-helpers');
 
 import type {
   TenantInfoRecord,
   TenantOperationRecord,
   BizTypeOperationRecord
-} from "./type-def/tenant-opinfo";
+} from './type-def/tenant-opinfo';
 
 const TenantInfoData: Array<TenantInfoRecord> = JSON.parse(
   fs.readFileSync(
-    path.resolve(__dirname, "..", "persistance/Tenant-Info.json"),
-    "utf-8"
+    path.resolve(__dirname, '..', 'persistance/Tenant-Info.json'),
+    'utf-8'
   )
 );
 
@@ -24,10 +24,11 @@ const TenantOperationData: Array<TenantOperationRecord> = flatten(
     .map(i => ({
       year: 2016 + Math.floor(i / (12 * 4)),
       month: Math.ceil((i / 4) % 12),
-      week: i % 4 + 1
+      week: (i % 4) + 1
     }))
-    .map(t => {
+    .map((t, i) => {
       return TenantInfoData.map(shop => ({
+        id: i,
         year: t.year,
         month: t.month,
         week: t.week,
@@ -56,10 +57,11 @@ const BizTypeOperationData: Array<BizTypeOperationRecord> = flatten(
     .map(i => ({
       year: 2016 + Math.floor(i / (12 * 4)),
       month: Math.ceil((i / 4) % 12),
-      week: i % 4 + 1
+      week: (i % 4) + 1
     }))
-    .map(t => {
+    .map((t, i) => {
       return uniq(TenantInfoData.map(i => i[1])).map(bizType => ({
+        id: i,
         year: t.year,
         month: t.month,
         week: t.week,
@@ -76,13 +78,16 @@ const BizTypeOperationData: Array<BizTypeOperationRecord> = flatten(
         ros: rand(1, 2), // 业态租售比 rent over sales
         rosLP: rand(1, 2), // 业态租售比 环比
         rosSPLY: rand(1, 2), // 业态租售比 同比
-        rosRange: [round(Math.abs((rand(1, 2) - 0.5) / 2), 2), round((rand(1, 2) + 0.5) % 1, 2)] // 业态
+        rosRange: [
+          round(Math.abs((rand(1, 2) - 0.5) / 2), 2),
+          round((rand(1, 2) + 0.5) % 1, 2)
+        ] // 业态
       }));
     })
 );
 
 function mockTenantOperation() {
-  return {TenantOperationData,  BizTypeOperationData};
+  return { TenantOperationData, BizTypeOperationData };
 }
 
 module.exports = mockTenantOperation;
