@@ -1,0 +1,203 @@
+.monitorPage {
+  max-width: 100%;
+  height: 100%;
+  margin-top: 8rem;
+  margin-left: calc(100% / 6);
+  z-index: 0;
+  padding: 2rem;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+    background-color: white;
+    width: 100%;
+    height: 13rem;
+
+    .grid-block-rentrate {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #80cbc4;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: left;
+      padding: 20px 5px 10px 20px;
+      margin: 1.6rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 95%;
+      height: 8rem;
+      img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: baseline;
+      }
+      .label {
+        margin-right: 2.7rem;
+        vertical-align: super;
+        font-family: 'Ubuntu', monospace;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+        letter-spacing: 1.6px;
+        line-height: 2.5rem;
+        .smalllabel {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .grid-block-efficient {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #9ccc65;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: left;
+      padding: 20px 5px 10px 20px;
+      margin: 1.6rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 95%;
+      height: 8rem;
+      img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: baseline;
+      }
+      .label {
+        margin-right: 2.7rem;
+        vertical-align: super;
+        font-family: 'Ubuntu', monospace;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+        letter-spacing: 1.6px;
+        line-height: 2.5rem;
+        .smalllabel {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .grid-block-stream {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #dce775;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: left;
+      padding: 20px 5px 10px 20px;
+      margin: 1.6rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 95%;
+      height: 8rem;
+      img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: baseline;
+      }
+      .label {
+        margin-right: 2.7rem;
+        vertical-align: super;
+        font-family: 'Ubuntu', monospace;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+        letter-spacing: 1.6px;
+        line-height: 2.5rem;
+        .smalllabel {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .grid-block-abnomalshop {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: #e57373;
+      font-size: 20px;
+      border-radius: 10px;
+      text-align: left;
+      padding: 20px 5px 10px 20px;
+      margin: 1.6rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 95%;
+      height: 8rem;
+      img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: baseline;
+      }
+      .label {
+        margin-right: 2.7rem;
+        vertical-align: super;
+        font-family: 'Ubuntu', monospace;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: black;
+        letter-spacing: 1.6px;
+        line-height: 2.5rem;
+        .smalllabel {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .map_index {
+    display: flex;
+    .location {
+      position: relative;
+      padding: 1rem;
+      width: 70%;
+      margin-right: 2rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .maplabel {
+        font-family: 'Ubuntu', monospace;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      img {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 20px;
+        height: 20px;
+      }
+
+      #amap {
+        padding-top: 1rem;
+        width: 100%;
+        height: 500px;
+      }
+    }
+
+    .indexlist {
+      position: relative;
+      padding: 1rem;
+      width: 30%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .indexlabel {
+        font-family: 'Ubuntu', monospace;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      img {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
