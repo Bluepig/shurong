@@ -1,3 +1,4 @@
+@import './base/base';
 .monitorPage {
   max-width: 100%;
   height: 100%;
@@ -161,7 +162,7 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
       .maplabel {
-        font-family: 'Ubuntu', monospace;
+        font-family: PingFangSC-Regular;
         font-weight: 300;
         font-size: 2rem;
       }
@@ -187,7 +188,7 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
       .indexlabel {
-        font-family: 'Ubuntu', monospace;
+        font-family: PingFangSC-Regular;
         font-weight: 300;
         font-size: 2rem;
       }
@@ -197,6 +198,68 @@
         top: 1rem;
         width: 20px;
         height: 20px;
+      }
+      .sublabel {
+        padding-top: 1.6rem;
+        font-family: PingFangSC-Regular;
+        font-weight: 300;
+        font-size: 1.5rem;
+
+        span {
+          margin-left: 0px;
+          margin-right: 20px;
+        }
+      }
+
+      .indexs {
+        padding-top: 1.6rem;
+        font-family: PingFangSC-Regular;
+        font-weight: 300;
+        font-size: 1.5rem;
+
+        li {
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+          float: left;
+          width: 100%;
+          margin-bottom: 0.5rem;
+          border-bottom: 1.3px solid #e0e0e0;
+          span {
+            float: left;
+            margin-top: 2%;
+            margin-left: 2.5%;
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+  .divhistory {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    .history {
+      position: relative;
+      padding: 1rem;
+      width: 100%;
+      margin-right: 2rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      .historylabel {
+        font-family: PingFangSC-Regular;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      img {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 20px;
+        height: 20px;
+      }
+      ReactEcharts {
+        border: 1px solid red;
+        height: 600px;
       }
     }
   }

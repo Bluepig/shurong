@@ -43,13 +43,13 @@
   - _Return_:
 
     ```javascript
-    type Returned = Array<TimeSeriesMetrics>;
+    type Returned = Array<TimeSeriesMetrics>
 
     type TimeSeriesMetrics = {
       year: number,
       month: number, // compound pk (year, month)
       projects: Array<ProjectMetrics>
-    };
+    }
 
     type ProjectMetrics = {
       projectID: number, // pk
@@ -61,7 +61,7 @@
       noi: number, // NOI 营运净收入
       irr: number, // IRR 内部收益率
       npv: number // NPV 净现值
-    };
+    }
     ```
 
   2.  **项目监测页面**
@@ -81,14 +81,14 @@
   - _Return_:
 
     ```javascript
-    type Returned = Array<TimeSeriesMetrics>;
+    type Returned = Array<TimeSeriesMetrics>
 
     type TimeSeriesMetrics = {
       year: number,
       month: number, // compound pk (year, month)
       projects: Array<ProjectMetrics>,
       mbrStats: Array<MbrMetrics>
-    };
+    }
 
     type ProjectMetrics = {
       projectID: number, // project id
@@ -104,7 +104,7 @@
       gfa: number, // Gross Floor Area 总建筑面积
       nla: number, // Net Leasable Area 总可租面积
       pkCapacity: number // Parking Capacity 总车位数
-    };
+    }
 
     type MbrMetrics = {
       projectID: number, // mbr metrics of project id
@@ -113,7 +113,7 @@
       newMbrCount: number, // 新增会员数量
       purchaseFreqStats: SumStats, // 购买频次归纳 Stats
       stayLengthStats: SumStats // 停留时间长 Stats
-    };
+    }
 
     type SumStats = {
       min: number,
@@ -122,7 +122,7 @@
       median: number,
       Q1: number,
       Q3: number
-    };
+    }
     ```
 
 # 11-19 Note:
@@ -166,9 +166,9 @@ Added header style
 
   ```javascript
   // if shopName presents
-  type Returned = Array<TenantOperationRecord>;
+  type Returned = Array<TenantOperationRecord>
   // if bizType presents
-  type Returned = Array<BizTypeOperationRecord>;
+  type Returned = Array<BizTypeOperationRecord>
 
   type BizTypeOperationRecord = {
     year: number, // 年份
@@ -188,7 +188,7 @@ Added header style
     rosLP: number, // 业态租售比 环比
     rosSPLY: number, // 业态租售比 同比
     rosRange: [number, number] // 业态
-  };
+  }
 
   type TenantOperationRecord = {
     year: number, // 年份
@@ -210,7 +210,7 @@ Added header style
     ros: number, // 租售比 rent over sales
     rosLP: number, // 租售比 环比
     rosSPLY: number // 租售比 同比
-  };
+  }
   ```
 
 - **Add Packages**
@@ -227,3 +227,19 @@ Added header style
 
 - **Add Packages**
   - react-router-dom
+
+# 11-30 Note:
+
+Yuan Tian
+
+- **React**
+
+Created Monitor Page.
+
+- **Add Packages**
+
+  - echart
+  - echarts-for-react
+  - react-amap
+
+  I added them on for web page test, it could be removed then data and d3 code are ready.
