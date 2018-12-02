@@ -234,7 +234,8 @@ Yuan Tian
 
 - **React**
 
-Created Monitor Page.
+Created Monitor Page. (Frameworkd nearly done)
+Created Detail Page.
 
 - **Add Packages**
 
