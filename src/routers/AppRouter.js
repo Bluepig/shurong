@@ -3,6 +3,7 @@ import HeaderBar from '../components/HeaderBar'
 import Sidebar from '../components/Sidebar'
 import FormatPage from '../components/FormatAll/FormatPage'
 import MonitorPage from '../components/MonitorAll/MonitorPage'
+import DetailPage from '../components/DetailAll/DetailPage'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 const routes = (
@@ -13,6 +14,7 @@ const routes = (
       <Switch>
         <Route path="/format" component={FormatPage} />
         <Route path="/monitor" component={MonitorPage} />
+        <Route path="/detail" component={DetailPage} />
       </Switch>
     </div>
   </BrowserRouter>

@@ -40,7 +40,9 @@ class Sidebar extends React.Component {
           </li>
           <li>
             <img src={projectDetailsLogo} alt="project-details-icon" />
-            <a href="/">项目详情</a>
+            <NavLink to="/detail" activeClassName="is-active">
+              项目详情
+            </NavLink>
           </li>
           <li>
             <img src={formatDetailsIcon} alt="format-details-icon" />
