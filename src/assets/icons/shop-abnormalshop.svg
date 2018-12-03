@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>异常</title>
+    <desc>Created with Sketch.</desc>
+    <g id="异常" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-7" transform="translate(4.000000, 4.000000)">
+            <path d="M18.8489717,1.8704717 C20.2889717,-0.624056604 23.8889717,-0.624056604 25.3289717,1.8704717 L34.5004811,17.7554717 L43.6711415,33.6396226 C45.1111415,36.1341509 43.3111415,39.2518868 40.4311415,39.2518868 L22.0889717,39.2518868 L3.74680189,39.2518868 C0.866801887,39.2518868 -0.933198113,36.1341509 0.506801887,33.6396226 L9.67831132,17.7554717 L18.8489717,1.8704717 Z" id="Stroke-1" stroke="#FCFCFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22.0888868,11.4986887 L22.0888868,25.0835943" id="Stroke-3" stroke="#FCFCFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M22.0888868,30.2023868 C21.1515283,30.2023868 20.3907736,30.9631415 20.3907736,31.9005 C20.3907736,32.8378585 21.1515283,33.5986132 22.0888868,33.5986132 C23.0262453,33.5986132 23.787,32.8378585 23.787,31.9005 C23.787,30.9631415 23.0262453,30.2023868 22.0888868,30.2023868" id="Fill-5" fill="#FCFCFC"></path>
+        </g>
+    </g>
+</svg>

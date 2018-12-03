@@ -244,3 +244,12 @@ Created Detail Page.
   - react-amap
 
   I added them on for web page test, it could be removed then data and d3 code are ready.
+
+# 12-3 Note:
+  Lily
+- **React**
+Created ShopPage (not finished)
+
+- **Add Packages**
+  - Moment( for dealing date)
+
