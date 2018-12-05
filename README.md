@@ -258,15 +258,4 @@ Created ShopPage (not finished)
 - **React**
 
 Created LineChart for ShopPage
-
-- 模拟数据
-  dataset: {
-  time: new Date(2018, 12, 1),
-  day:1,
-  food: { bizType: '餐饮', sales: 952.9},
-  market: { bizType: '超市', sales: 505.1 },
-  service: { bizType: '配套服务', sales: 993.35 },
-  retail: { bizType: '零售', sales: 524.35 },
-  entertainment: { bizType: '休闲娱乐', sales: 475.9 },
-  full: { bizType: 'full', sales: 2000 },
-  }
+Added tooltip in Shop-LineChart
