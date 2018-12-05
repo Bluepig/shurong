@@ -6,6 +6,7 @@
     margin-left: calc(100% / 6);
     z-index: 0;
     padding: 2.4rem;
+    font-family: $font-light;
     .longblock {
         width: 100%;
         height: 11.2rem;
@@ -85,8 +86,70 @@
                     margin-left: 4rem;
                 }
             }
+            .chart-wrapper{
+                .line-chart{
+                }
+            }
         }
 
+    }
+    .shoplist-threeblocks{
+        margin: 2.4rem 0;
+        display: flex;
+        justify-content: space-between;
+        .block{
+            position: relative;
+            padding: 2.4rem;
+            background: #FCFCFC;
+            box-shadow: 0 1.5rem 3rem 0 rgba(0,0,0,0.08);
+            border-radius: 1.2rem;
+            width: calc(100% / 3.5);
+            .block-title{
+                font-size: 2.4rem;
+            }
+            img{
+                float: right;
+            }
+            ul{
+                font-size: 1.4rem;
+                margin-top: 1.2rem;
+                li{
+                    border-block-end: 0.1rem solid #D5D5D5;
+                    span{
+                        display: inline-block;
+                        margin: 1.2rem 0;
+                        width: 50%;
+                    }
+                }
+            }
+            .label-detail{
+                position: absolute;
+                left: 2.4rem;
+                bottom: 3.4rem;
+                color: #3FA9F5;
+                font-family: $font-medium;
+                font-size: 1.4rem;
+            }
+            .scrollbars{
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                margin: 3.55rem 0 0.8rem 0;
+                span{
+                    display: inline-block;
+                    width: 5.6rem;
+                    height: 0.1rem;
+                    background-color: #D5D5D5;
+                    &:nth-of-type(1){
+                        margin-right: 0.4rem;
+                    }
+                    &.bar-current{
+                        height: 0.2rem;
+                        background-color: #3FA9F5 ;
+                    }
+                }
+            }
+        }
     }
 
 }

@@ -21,7 +21,7 @@ class ShopFourIndex extends React.Component {
                             <img src={shop_arrow_down}></img>
                             2%
                         </span>
-                        <div class="smalllabel">出租率</div>
+                        <div className="smalllabel">出租率</div>
                     </div>
                     <img src={shop_rentrate}/>
                 </div>
@@ -32,7 +32,7 @@ class ShopFourIndex extends React.Component {
                             <img src={shop_arrow_down}></img>
                             2%
                         </span>
-                        <div class="smalllabel">坪效</div>
+                        <div className="smalllabel">坪效</div>
                     </div>
                     <img src={shop_efficient}/>
                 </div>
@@ -43,7 +43,7 @@ class ShopFourIndex extends React.Component {
                             <img src={shop_arrow_down}></img>
                             2%
                         </span>
-                        <div class="smalllabel">客流变化</div>
+                        <div className="smalllabel">客流变化</div>
                     </div>
                     <img src={shop_stream}/>
                 </div>
@@ -54,7 +54,7 @@ class ShopFourIndex extends React.Component {
                             <img src={shop_arrow_down}></img>
                             2%
                         </span>
-                        <div class="smalllabel">异常店铺</div>
+                        <div className="smalllabel">异常店铺</div>
                     </div>
                     <img src={shop_abnormalshop}/>
                 </div>
