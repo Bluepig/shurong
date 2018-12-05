@@ -1,6 +1,7 @@
 import React from 'react'
 import threeDots from '../../assets/icons/threeDots.svg'
 import FormatLineChart from '../ShopAll/Format-line-chart'
+import HoverToolTip from '../FormatAll/Format-tooltip'
 const mockdata = [
     {
         time: new Date(2018, 12, 1),
@@ -111,12 +112,13 @@ class ShopLineChart extends React.Component {
     render() {
         return(
             <div className="shop-chart">
+                <HoverToolTip />
                 <div className="chart-head">
                     <p>会员与消费分析</p>
                     <div className="chart-head-right">
                         <input type="date" value={this.state.options.pickedDate} onChange={this.handleChange}/>
                         {/* { moment(this.state.options.pickedDate).format() } */}
-                        <img src={threeDots} />
+                        <img src={threeDots} alt="threeDots"/>
                     </div>
                 </div>
                 <div className="chart-wrapper" ref={this.chartWrapper} >

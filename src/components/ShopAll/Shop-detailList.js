@@ -13,7 +13,7 @@ class ShopDetailList extends React.Component {
             <div className="shoplist-threeblocks">
                 <div className="block">
                     <span className="block-title">店铺基本信息</span>
-                    <img src={threeDots} />
+                    <img src={threeDots} alt="threeDots"/>
                     <ul>
                         <li>
                             <span>公司名称</span>
@@ -67,7 +67,7 @@ class ShopDetailList extends React.Component {
                 </div>
                 <div className="block">
                 <span className="block-title">店铺基本信息</span>
-                    <img src={threeDots} />
+                    <img src={threeDots} alt="threeDots"/>
                     <ul>
                         <li>
                             <span>公司名称</span>
@@ -121,7 +121,7 @@ class ShopDetailList extends React.Component {
                 </div>
                 <div className="block">
                 <span className="block-title">店铺基本信息</span>
-                    <img src={threeDots} />
+                    <img src={threeDots} alt="threeDots"/>
                     <ul>
                         <li>
                             <span>公司名称</span>
@@ -149,7 +149,7 @@ class ShopDetailList extends React.Component {
                         </li>
 
                     </ul>
-                    <span className="label-detail">查看详情 &#62;</span>
+                    <a href="" className="label-detail">查看详情 &#62;</a>
                 </div>
             </div>
         )

@@ -1,5 +1,17 @@
 import * as d3 from 'd3'
-import moment, { ISO_8601, updateLocale } from 'moment'
+import moment from 'moment'
+
+function displayTooltip(selection, msg, x, y) {
+    let tooltipOffset = 10;
+    selection
+    .style('left', x + tooltipOffset + 'px')
+    .style('top', y - tooltipOffset + 'px')
+    .style('display', 'block')
+    .text(msg);
+}
+function hideTooltip(selection) {
+selection.style('display', 'none');
+}
 
 class FormatLineChart {
     constructor() {
@@ -10,6 +22,7 @@ class FormatLineChart {
         this._chartHeight = null;
         this._pickedDate = null;
         this._lineColor = null;
+        this._toolTip = null;
         this._d3 = d3;
     }
     create(container, options) {
@@ -74,6 +87,7 @@ class FormatLineChart {
             .call(yAxis);
     }
     drawLine (key) {
+        let tooltip = d3.select('#hover-tooltip');
         // Set the ranges
         var xRange = []
         var space = this._chartWidth/6
@@ -89,14 +103,29 @@ class FormatLineChart {
         // Define the line
         var formatLine = this._d3.line()
             .x(d => x(d.time))
-            .y(d => y(d[key].sales));
+            .y(d => y(d[key].sales))
+            // .curve(d3.curveCatmullRom.alpha(0.5))
+
         // Draw the line
-        this._svg.append("path")
+        this._svg.append('g')
+            .attr('class', 'mainGroup')
+            .selectAll('path.line-main')
+            .data(this._data)
+            .enter()
+            .append("path")
             .attr("class", key + "line")
             .attr("d", formatLine(this._data))
             .attr('stroke', this._lineColor[key])
-            .attr('stroke-width', 4)
+            .attr('stroke-width', 3)
             .style('fill', 'none')
+            .on('mousemove', function(d) {
+                let { pageX, pageY } = d3.event;
+                let msg = d[key].bizType;
+                displayTooltip(tooltip, msg, pageX, pageY);
+            })
+            .on('mouseout', function(){
+                hideTooltip(tooltip)
+            })
     }
     updateWeekTime (d) {
         var weekOfday = moment(d).format('E'); // which day in this week

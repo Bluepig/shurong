@@ -18,45 +18,45 @@ class ShopFourIndex extends React.Component {
                     <div className="label">
                         23000
                         <span>
-                            <img src={shop_arrow_down}></img>
+                            <img src={shop_arrow_down} alt='shop_arrow_down'></img>
                             2%
                         </span>
                         <div className="smalllabel">出租率</div>
                     </div>
-                    <img src={shop_rentrate}/>
+                    <img src={shop_rentrate} alt='shop_rentrate'/>
                 </div>
                 <div className="smallblock">
                     <div className="label">
                         23000
                         <span>
-                            <img src={shop_arrow_down}></img>
+                            <img src={shop_arrow_down} alt='shop_arrow_down'></img>
                             2%
                         </span>
                         <div className="smalllabel">坪效</div>
                     </div>
-                    <img src={shop_efficient}/>
+                    <img src={shop_efficient} alt='shop_efficient' />
                 </div>
                 <div className="smallblock">
                     <div className="label">
                         23000
                         <span>
-                            <img src={shop_arrow_down}></img>
+                            <img src={shop_arrow_down} alt='shop_arrow_down'></img>
                             2%
                         </span>
                         <div className="smalllabel">客流变化</div>
                     </div>
-                    <img src={shop_stream}/>
+                    <img src={shop_stream} alt='shop_stream' />
                 </div>
                 <div className="smallblock">
                     <div className="label">
                         肯德基
                         <span>
-                            <img src={shop_arrow_down}></img>
+                            <img src={shop_arrow_down} alt='shop_arrow_down'></img>
                             2%
                         </span>
                         <div className="smalllabel">异常店铺</div>
                     </div>
-                    <img src={shop_abnormalshop}/>
+                    <img src={shop_abnormalshop} alt='shop_abnormalshop' />
                 </div>
             </div>
         )

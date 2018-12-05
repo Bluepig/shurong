@@ -259,7 +259,8 @@ Created ShopPage (not finished)
 
 Created LineChart for ShopPage
 
-dataset: {
+- 模拟数据
+  dataset: {
   time: new Date(2018, 12, 1),
   day:1,
   food: { bizType: '餐饮', sales: 952.9},
