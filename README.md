@@ -257,11 +257,11 @@ Created ShopPage (not finished)
 
 - **React**
 
-Created LineChart for ShopPage
-Created Format-line-chart Component
+1. Created LineChart for ShopPage
+2. Created Format-line-chart Component
 
 # 12-6 Note
 - **React**
-Created AbnormalPage
-Created Format-SelectBar Component
-Created FormatBlockHead Component
+1. Created AbnormalPage
+2. Created Format-SelectBar Component
+3. Created FormatBlockHead Component
