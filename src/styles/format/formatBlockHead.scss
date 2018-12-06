@@ -1,0 +1,44 @@
+@import '../base/base';
+.block-head{
+    display: flex;
+    justify-content: space-between;
+    .headtitle{
+        font-family: $font-light;
+        font-size: 2.4rem;
+        color: #444444;
+        letter-spacing: 0.055rem;
+    }
+    .head-right{
+        display: flex;
+        align-items: center;
+        .searchBox{
+            position: relative;
+            input{
+                width: 26.4rem;
+                padding: 1.4rem 1.6rem;
+                font-family: $font-light;
+                font-size: 1.4rem;
+                appearance: none;
+                border: none;
+                border: 0.1rem solid #E1E4E8;
+                border-radius: 0.4rem;
+                color: #A6AEBC;
+            }
+            .arrow{
+                position: absolute;
+                display: inline-block;
+                top: 43%;
+                right: 2rem;
+                transform: rotate(90deg) scaleY(2) translateX(-50%);
+                color: #444444;
+                font-weight: bold;
+            }
+        }
+        .month{
+            margin-left: 6.4rem;
+            margin-right: 4rem;
+            line-height: 2rem;
+            border-bottom: 2px solid #3FA9F5;
+        }
+    }
+}

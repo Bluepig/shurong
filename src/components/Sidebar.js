@@ -58,7 +58,9 @@ class Sidebar extends React.Component {
           </li>
           <li>
             <img src={abnormalListIcon} alt="abnormal-list-icon" />
-            <a href="/">异常列表</a>
+            <NavLink to="/abnormal" activeClassName="is-active">
+              异常列表
+            </NavLink>
           </li>
           <li>
             <img src={parkingLotIcon} alt="parking-lot-icon" />

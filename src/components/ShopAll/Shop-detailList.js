@@ -149,7 +149,7 @@ class ShopDetailList extends React.Component {
                         </li>
 
                     </ul>
-                    <a href="" className="label-detail">查看详情 &#62;</a>
+                    <a href="" className="label-checkdetail">查看详情 &#62;</a>
                 </div>
             </div>
         )

@@ -258,4 +258,10 @@ Created ShopPage (not finished)
 - **React**
 
 Created LineChart for ShopPage
-Added tooltip in Shop-LineChart
+Created Format-line-chart Component
+
+# 12-6 Note
+- **React**
+Created AbnormalPage
+Created Format-SelectBar Component
+Created FormatBlockHead Component

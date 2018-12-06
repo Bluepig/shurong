@@ -1,0 +1,80 @@
+@import './base/base';
+.abnormal-page{
+    max-width: 100%;
+    height: 100%;
+    margin-top: 8rem;
+    margin-left: calc(100% / 6);
+    z-index: 0;
+    padding: 2.4rem;
+    color: #444444;
+    font-family: $font-light;
+    .abnormal-detail{
+        padding: 2.4rem;
+        width: 100%;
+        background: #FCFCFC;
+        box-shadow: 0 1.5rem 3rem 0 rgba(0,0,0,0.08);
+        border-radius: 1.2rem;
+        .two-selections{
+            display: flex;
+            margin: 2.4rem 0;
+        }
+        .content-main{
+            font-size: 1.4rem;
+            letter-spacing: 0.062rem;
+            text-align: justify;
+            line-height: 2.6rem;
+            display: flex;
+            justify-content: space-between;
+            p{
+                width: auto;
+            }
+            .chart-wrapper{
+                width: 200%;
+                margin-left: 4.8rem;
+            }
+        }
+    }
+    .abnormal-others{
+        width: 100%;
+        background: #FCFCFC;
+        box-shadow: 0 1.5rem 3rem 0 rgba(0,0,0,0.08);
+        border-radius: 1.2rem;
+        margin: 2.4rem 0;
+        padding: 2.4rem;
+        .block-content{
+            font-family: $font-medium;
+            .block-list{
+                margin-top: 4.8rem;
+                .block-li{
+                    position: relative;
+                    margin-bottom: 4rem;
+                    font-size: 1.4rem;
+                    .li-title{
+                        display: inline-block;
+                        line-height: 2rem;
+                        padding: 0.2rem 0;
+                    }
+                    .li-labels{
+                        position: absolute;
+                        left: 7.3rem;
+                        span{
+                            display: inline-block;
+                            border: 0.1rem solid #D0021B;
+                            border-radius: 1.2rem;
+                            line-height: 2rem;
+                            padding: 0.2rem 1.2rem;
+                            font-family: $font-light;
+                            color: #D0021B;
+                            margin-right: 4rem;
+                        }
+                        .label-checkdetail{
+                            color: #3FA9F5;
+                            font-family: $font-medium;
+                            margin-left: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

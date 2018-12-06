@@ -40,7 +40,7 @@ class ShopFourIndex extends React.Component {
                     <div className="label">
                         23000
                         <span>
-                            <img src={shop_arrow_down} alt='shop_arrow_down'></img>
+                            <img src={shop_arrow_up} alt='shop_arrow_up'></img>
                             2%
                         </span>
                         <div className="smalllabel">客流变化</div>

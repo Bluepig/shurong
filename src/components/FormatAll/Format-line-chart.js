@@ -23,6 +23,7 @@ class FormatLineChart {
         this._pickedDate = null;
         this._lineColor = null;
         this._toolTip = null;
+        this._lineWeight = null;
         this._d3 = d3;
     }
     create(container, options) {
@@ -34,6 +35,7 @@ class FormatLineChart {
             margin,
             svgClassName,
             lineColor,
+            lineWeight,
         } = options
 
         // bind value of options
@@ -43,6 +45,7 @@ class FormatLineChart {
         this._chartHeight = svgHeight - margin*2
         this._pickedDate = pickedDate
         this._lineColor = lineColor
+        this._lineWeight = lineWeight
         // define x scale range
         var xRange = []
         var space = this._chartWidth/6
@@ -65,7 +68,7 @@ class FormatLineChart {
         this._svg = d3.select(this._container)
             .append("svg")
             .attr("preserveAspectRatio", "xMidYMid meet")
-            .attr("viewBox", "0 0 1000 500")
+            .attr("viewBox", "0" + " 0" + " " + svgWidth + " " + svgHeight)
             .attr("class", svgClassName)
             .append("g")
             .attr("transform", "translate(" + margin + "," + margin + ")")
@@ -116,7 +119,7 @@ class FormatLineChart {
             .attr("class", key + "line")
             .attr("d", formatLine(this._data))
             .attr('stroke', this._lineColor[key])
-            .attr('stroke-width', 3)
+            .attr('stroke-width', this._lineWeight)
             .style('fill', 'none')
             .on('mousemove', function(d) {
                 let { pageX, pageY } = d3.event;

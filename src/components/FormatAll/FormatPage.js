@@ -1,7 +1,7 @@
 import React from 'react';
 import FormatList from './FormatList';
 import FormatDisplay from './FormatDisplay';
-import '../../styles/formatPage.scss';
+import '../../styles/format/formatPage.scss';
 class FormatPage extends React.Component {
   constructor(props) {
     super(props);
