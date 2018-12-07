@@ -24,4 +24,4 @@ class FormatBlockHead extends React.Component {
     }
 }
 
-export default FormatBlockHead
+export default FormatBlockHead;

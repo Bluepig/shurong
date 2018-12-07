@@ -13,6 +13,7 @@
   text-align: right;
   margin-top: 2.8rem;
   margin-right: 6.7rem;
+  position: relative;
 }
 .headerbar-header {
   vertical-align: middle;
@@ -33,4 +34,21 @@
   height: 3.2rem;
   border-radius: 50%;
   margin-left: 4rem;
+}
+.header-icon-container{
+  position: absolute;
+  display: flex;
+  left: -2.5rem;
+  top: -2.8rem;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
+  background-image: url("../assets/icons/head-icon-layer.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  .header-icon:hover{
+    transform: rotate(90deg);
+    transition: 1s;
+  }
 }

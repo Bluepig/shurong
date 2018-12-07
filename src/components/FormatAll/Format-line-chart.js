@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import moment from 'moment'
+import moment from 'moment';
 
 function displayTooltip(selection, msg, x, y) {
     let tooltipOffset = 10;

@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopItem from '../ShopAll/Shop-Item'
+import FormatShopLongBlock from '../FormatAll/Format-shop-longBlock'
 import ShopFourIndex from '../ShopAll/Shop-FourIndex'
 import ShopLineChart from '../ShopAll/Shop-LineChart'
 import '../../styles/shopPage.scss'
@@ -13,7 +13,7 @@ class ShopPage extends React.Component {
     render() {
         return(
             <div className='shopPage'>
-                <ShopItem />
+                <FormatShopLongBlock />
                 <ShopFourIndex />
                 <ShopLineChart />
                 <ShopDetailList />

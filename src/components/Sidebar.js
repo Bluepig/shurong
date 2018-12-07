@@ -26,7 +26,9 @@ class Sidebar extends React.Component {
         <ul className="page-type">
           <li>
             <img src={multiProjectsLogo} alt="multi-projects-icon" />
-            <a href="/">多项目资产管理</a>
+            <NavLink to="/multi" activeClassName="is-active">
+              多项目资产管理
+            </NavLink>
           </li>
           <li>
             <img src={singleProjectLogo} alt="single-projects-icon" />

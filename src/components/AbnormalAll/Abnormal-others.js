@@ -35,12 +35,12 @@ class AbnormalOthers extends React.Component {
                     <ul className="block-list">
                         {this.state.abnormalShops.map(
                             d =>
-                            <li className="block-li">
+                            <li className="block-li" key={d.shopName}>
                                 <span className="li-title">{d.shopName}</span>
                                 <span className="li-labels">
                                     {d.abnormalItems.map(
                                         i =>
-                                        <span>{i}</span>
+                                        <span key={i.toString()}>{i}</span>
                                     )}
                                     <a href="" className="label-checkdetail">查看详情 &#62;</a>
                                 </span>

@@ -1,5 +1,6 @@
 import React from 'react'
-class ShopItem extends React.Component {
+import '../../styles/format/formatShopLongBlock.scss'
+class FormatShopLongBlock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -14,5 +15,5 @@ class ShopItem extends React.Component {
     }
 }
 
-export default ShopItem;
+export default FormatShopLongBlock;
 
