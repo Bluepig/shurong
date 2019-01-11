@@ -13,7 +13,7 @@ function hideTooltip(selection) {
   selection.style('display', 'none');
 }
 
-class FormatRingChart {
+class RingChart {
   constructor() {
     // init when create by passing
     this._container = null;
@@ -70,9 +70,6 @@ class FormatRingChart {
   }
 
   update(keyField, field) {
-    // for CB context
-    let that = this;
-
     // annotate dataset with angle attributes
     let pieGen = d3
       .pie()
@@ -135,10 +132,10 @@ class FormatRingChart {
         hideTooltip(tooltip);
       });
 
-    // update
+    // update;
     arcMain
       .transition()
-      .duration(750)
+      .duration(150)
       .attrTween('d', mainArcTween);
 
     // draw shadow
@@ -159,7 +156,7 @@ class FormatRingChart {
     // update
     arcShadow
       .transition()
-      .duration(750)
+      .duration(150)
       .attrTween('d', shadowArcTween);
 
     // Easing Transition
@@ -188,4 +185,4 @@ class FormatRingChart {
   }
 }
 
-export default FormatRingChart;
+export default RingChart;

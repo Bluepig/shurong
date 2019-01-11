@@ -2,7 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 import HoverTooltip from './Format-tooltip';
-import RingChartCPNT from './Format-ring-chart-component';
+import RingChartCPNT from './drawings/_d3-ring-component';
+import dotsIcon from '../../assets/icons/dots-icon.svg';
 const mockdata = [
   {
     year: 2016,
@@ -138,22 +139,30 @@ class FormatDisplay extends React.Component {
         shadowLength: 10,
         wrapperDivClass: 'RingChart-wrapper-2',
         svgClassName: 'RingChart-2'
-      }
+      },
+      isupdated: true
     };
   }
-  changeFieldToDraw(field) {
+  changeFieldToDraw = param => {
     let newState = Object.assign({}, this.state);
-    newState.opts1.fieldToDraw = field;
+    newState.opts1.fieldToDraw = param;
+    newState.isupdated = false;
     this.setState(newState);
-  }
+  };
 
   componentDidMount() {
     const reqURL = `http://localhost:5000/api/data/tenant-operation-monitor?bizType=${
-      this.props.testdata
+      this.props.bizType
     }&year=2016&month=1&week=2`;
 
     axios.get(reqURL).then(res => {
-      this.setState({ renderData: res.data });
+      this.setState(prevState => ({
+        opts1: {
+          ...prevState.opts1,
+          data: res.data
+        }
+      }));
+      console.log(this.state);
     });
   }
 
@@ -161,7 +170,7 @@ class FormatDisplay extends React.Component {
     // axios
     //   .get(
     //     `http://localhost:5000/api/data/tenant-operation-monitor?bizType=${
-    //       bizTypeArray[prevProps.testdata]
+    //       bizTypeArray[prevProps.bizType]
     //     }&year=2016&month=1`
     //   )
     //   .then(res => {
@@ -174,20 +183,44 @@ class FormatDisplay extends React.Component {
   render() {
     return (
       <div className='formatDisplayWrapper'>
-        <div className='container'>
+        <div className='chart-container-1'>
+          <div className='chart-header-wrapper-1'>
+            <span className='chart-header-text'>业态分布</span>
+            <span className='chart-header-button'>本月</span>
+            <img
+              src={dotsIcon}
+              className='chart-header-more'
+              alt='more option'
+            />
+          </div>
           <HoverTooltip />
-          <button
-            type='button'
-            onClick={() => this.changeFieldToDraw.bind(this)('area')}>
-            面积
-          </button>
-          <button
-            type='button'
-            onClick={() => this.changeFieldToDraw.bind(this)('sales')}>
-            营业额
-          </button>
+          <div className='buttons-wrapper'>
+            <button
+              type='button'
+              className={`chart-option-button ${this.state.isupdated &&
+                'isfocused'}`}
+              data-biztype='area'
+              onClick={this.changeFieldToDraw.bind(this, 'area')}>
+              面积
+            </button>
+            <button
+              type='button'
+              className='chart-option-button'
+              data-biztype='sales'
+              onClick={this.changeFieldToDraw.bind(this, 'sales')}>
+              销售额
+            </button>
+            <button
+              type='button'
+              className='chart-option-button'
+              data-biztype='ros'
+              onClick={this.changeFieldToDraw.bind(this, 'ros')}>
+              租售比
+            </button>
+          </div>
+
           <RingChartCPNT options={this.state.opts1} />
-          <RingChartCPNT options={this.state.opts2} />
+          {/* <RingChartCPNT options={this.state.opts2} /> */}
           {/* <RingChartCPNT options={this.state.opts2}/> */}
         </div>
       </div>

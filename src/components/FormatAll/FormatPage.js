@@ -16,7 +16,7 @@ class FormatPage extends React.Component {
     return (
       <div className='formatPage'>
         <FormatList onFatherClick={this.onFormatClick} />
-        <FormatDisplay testdata={this.state.biztype} />
+        <FormatDisplay bizType={this.state.biztype} />
       </div>
     );
   }

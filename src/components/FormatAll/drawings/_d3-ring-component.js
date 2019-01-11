@@ -1,12 +1,12 @@
 /* Ring Chart D3 Renderer */
 import React from 'react';
-import FormatRingChart from './Format-ring-chart';
+import RingChart from './_d3-ring-chart';
 
 class RingChartCPNT extends React.Component {
   constructor(props) {
     super(props);
     this.wrapperElement = React.createRef();
-    this.chart = new FormatRingChart();
+    this.chart = new RingChart();
   }
 
   componentDidMount() {

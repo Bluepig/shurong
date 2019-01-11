@@ -11,7 +11,6 @@ import serviceIcon from '../../assets/icons/service-icon.svg';
 import marketIcon from '../../assets/icons/market-icon.svg';
 import clothesIcon from '../../assets/icons/clothes-icon.svg';
 import allFormatsIcon from '../../assets/icons/all-formats-icon.svg';
-
 import 'react-accessible-accordion/dist/minimal-example.css';
 class FormatList extends React.Component {
   constructor(props) {
